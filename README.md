@@ -1,2 +1,1 @@
 # tecnomultimedia
-ooooopomomo
