@@ -57,13 +57,13 @@ void mouseClicked(){
     //Boton Si se vuelven
      if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
 
-      pantalla = 5;
+      pantalla = 6;
 
     }
     //Boton No se van
       if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
 
-      pantalla = 6;
+      pantalla = 5;
 
     }
 
@@ -116,7 +116,7 @@ void mouseClicked(){
     }
     //Boton No se quedan
       if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
-      pantalla = 7;
+      pantalla = 11;
 }
   }      else if(pantalla == 10){
 
@@ -126,124 +126,115 @@ void mouseClicked(){
     }
     //Boton No se van
       if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
-      pantalla = 012;
+      pantalla = 12;
 }
   }       else if(pantalla == 11){
 
-    //Botón si Se van
-    if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
-      pantalla = 12;
-}
-  }      else if(pantalla == 12){
-
-    //Botón continuar
+    //Botón Continuar
     if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
       pantalla = 00;
 }
-  }    else if(pantalla == 13){
+  }      else if(pantalla == 12){
 
-    //Botón si Se duerme
+    //Botón Si
     if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
       pantalla = 14;
-    }
-    //Boton No se duerme
-      if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
-      pantalla = 15;
 }
+  if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
+      pantalla = 13;
+}
+  }    else if(pantalla == 13){
+
+    //Botón Continuar
+    if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
+      pantalla = 00;
+    }
+    
   }     else if(pantalla == 14){
 
     //Botón continuar
     if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
-      pantalla = 00;
+      pantalla = 15;
     }
+        if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
+      pantalla = 13;
+}
   }   else if(pantalla == 15){
 
     //Botón si realiza un plan
     if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
       pantalla = 16;
     }
-    //Boton No realiza el plan
-      if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
-      pantalla = 14;
-}
-  }    else if(pantalla == 17){
+    
+  }    else if(pantalla == 16){
 
-    //Botón continuar
+    //Botón Si
     if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
       pantalla = 18;
 }
-  }     else if(pantalla == 19){
-
-    //Botón si corren
-    if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
-      pantalla = 20;
-    }
-    //Boton No corren
-      if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
-      pantalla = 21;
+   if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
+      pantalla = 17;
 }
-  }     else if(pantalla == 21){
+  }     else if(pantalla == 17){
+
+    //Botón Continuar
+    if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
+      pantalla = 13;
+    }
+  }     else if(pantalla == 18){
 
     //Botón continuar
     if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
-      pantalla = 14;
+      pantalla = 20;
 }
-  }     else if(pantalla == 22){
+   if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
+      pantalla = 19;
+}
+  }     else if(pantalla == 19){
 
     //Botón si Se esconden
     if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
-      pantalla = 23;
+      pantalla = 00;
     }
-    //Boton No se esconden
-      if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
+
+  }     else if(pantalla == 20){
+
+    //Botón continuar
+    if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
+      pantalla = 21;
+}
+ if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
+      pantalla = 22;
+}
+  }     else if(pantalla == 21){
+
+    //Botón si le roba las botas
+    if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
+      pantalla = 22;
+    }
+    //no se las roba
+     if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
+      pantalla = 23;
+}
+  }     else if(pantalla == 22){
+
+    //Botón si Se van
+    if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
+      pantalla = 00;
+    }
+  }     else if(pantalla == 23){
+
+    //Botón continuar
+    if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
       pantalla = 24;
 }
   }     else if(pantalla == 24){
 
     //Botón continuar
     if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
-      pantalla = 00;
-}
-  }     else if(pantalla == 23){
-
-    //Botón si le roba las botas
-    if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
       pantalla = 25;
-    }
-    //Boton No le roban las botas
-      if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
-      pantalla = 26;
 }
-  }     else if(pantalla == 25){
-
-    //Botón si Se van
-    if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
-      pantalla = 26;
-    }
-    //Boton No se van
-      if(mouseX > 200 && mouseX < 300 && mouseY > 450 && mouseY < 500){
-      pantalla = 27;
-}
-  }     else if(pantalla == 26){
-
-    //Botón continuar
-    if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
-      pantalla = 00;
-}
-  }     else if(pantalla == 27){
-
-    //Botón continuar
-    if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
-      pantalla = 28;
-}
-  }    else if(pantalla == 10){
-
-    //Botón continuar
-    if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
-      pantalla = 29;
-
-}
-  }      else if(pantalla == 30){
+  }         else if(pantalla == 25){
 
     //Botón creditos
     if(mouseX > 500 && mouseX < 600 && mouseY > 450 && mouseY < 500){
@@ -265,4 +256,4 @@ void mouseClicked(){
       
     }
  }
-  }    
+  }
