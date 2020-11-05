@@ -38,7 +38,7 @@ class Fondo {
     } if (posXInicial <- 540) {
       posXInicial = 800;
     }
-    imageMode(CORNER);
+    //imageMode(CORNER);
     image(arboles, porcentajeX(X), porcentajeY(Y));
   }
 }

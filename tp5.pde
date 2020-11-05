@@ -10,6 +10,9 @@ void draw() {
 void keyPressed() {
   juego.teclaPresionada();
 }
+void mouseClicked() {
+  juego.click();
+}
 int porcentajeX(int valor) {
   return round(map(valor, 0, 800, 0, width));
 }
