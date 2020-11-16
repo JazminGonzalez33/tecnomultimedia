@@ -42,4 +42,9 @@ class Obstaculo {
   boolean saleDelaPantalla() {
     return posX <=0 ;
   }
+
+  void reset(int p_posX, int p_posY) {
+    posX = p_posX;
+    posY = p_posY;
+  }
 }

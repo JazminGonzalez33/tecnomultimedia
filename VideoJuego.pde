@@ -2,9 +2,8 @@ class VideoJuego {
   int cantidadObjetos = 5;
   int posX, posY, tamX, tamY;
   int tam;
-
+  Vida vidas;
   Pulgarcito pulgarcito;
-  Ogro ogro;
   Fondo fondo;
   Obstaculo [] obstaculo = new Obstaculo [cantidadObjetos];
 
@@ -23,51 +22,61 @@ class VideoJuego {
   }
 
   void dibujarObstaculosYOgro() {
-
-
     for (int i = 1; i < cantidadObjetos; i++ ) {
       obstaculo[i].dibujar();
-
-
       if (pulgarcito.chocaCon(obstaculo[i])) {
+        vidas.decrementar();
       } 
-      if (pulgarcito.chocaCon(ogro)) {
-      }
+      /* if (pulgarcito.chocaCon(ogro)) {
+       }*/
       if (obstaculo[i].saleDelaPantalla()) {
         obstaculo[i].moverEnX(posObstaculoVolver());
       }
     }
   }
 
-  void dibujarOgro() { //lo llamo en juego
-    ogro.dibujar();
-  }
-
-  void correogro() {
-    ogro.correr();
-  }
+  /*  void dibujarOgro() { //lo llamo en juego
+   ogro.dibujar();
+   }
+   
+   void correogro() {
+   ogro.correr();
+   }*/
   void teclaPresionada() {
     pulgarcito.correr();
     pulgarcito.saltar();
-    ogro.correr();
+    //ogro.correr();
   }
 
   void dibujoVideoJuego() {
     fondo.dibujar();
-    dibujarObstaculosYOgro();
+    dibujarObstaculos();
+    vidas.dibujar ();
     pulgarcito.dibujar();
-    pulgarcito.caer();
+   pulgarcito.caer();
   }
 
   int controlarGanarOPerder() {
-    if (pulgarcito.chocaCon(obstaculo[1]) || pulgarcito.chocaCon(obstaculo[2]) || pulgarcito.chocaCon(obstaculo[3]) || pulgarcito.chocaCon(obstaculo[4]) ) { 
+    // if (pulgarcito.chocaCon(obstaculo[1]) || pulgarcito.chocaCon(obstaculo[2]) || pulgarcito.chocaCon(obstaculo[3]) || pulgarcito.chocaCon(obstaculo[4]) ) { 
+    if (pulgarcito.haPerdido(vidas)) { 
       return 3;
     } else    if (pulgarcito.haGanado()) {
       return 2;
-    } else  if (pulgarcito.chocaCon(ogro)) {
-      return 4;
     }
     return 0;
+  }
+
+  void dibujarObstaculos() {
+    for (int i = 1; i < cantidadObjetos; i++ ) {
+      obstaculo[i].dibujar();
+      if (obstaculo[i].saleDelaPantalla()) {
+        obstaculo[i].moverEnX(posObstaculoVolver());
+      } 
+      if (pulgarcito . chocaCon (obstaculo [i])) {
+        obstaculo[i].reset(i*tam, 0);
+        vidas.decrementar();
+      }
+    }
   }
   int posObstaculoVolver() {
     return round (random(800, 2000));
@@ -75,7 +84,8 @@ class VideoJuego {
   void inicializar() {
     fondo = new Fondo();
     pulgarcito= new Pulgarcito(porcentajeX(50), porcentajeY(0), width/16);
-    ogro = new Ogro(porcentajeX(-50), 0, width/20);
+    pulgarcito.posY = constrain(posY, - 280, 0 );
+    vidas = new Vida (3, porcentajeX(50), porcentajeX(tam));
     for (int i=1; i< cantidadObjetos; i ++) {
       int tipoObstaculo = floor(random(1, 5));
       int posObstaculo = floor(random(1, 5));
