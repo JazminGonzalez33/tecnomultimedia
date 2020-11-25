@@ -1,20 +1,23 @@
 import processing.sound.*;
 
-Controlador controlador1;
+Controlador controlador;
 
 void setup() {
   size(800, 600);
-  controlador1 = new Controlador(this);
+  surface.setResizable(true);
+  controlador = new Controlador(this);
 }
 
 void draw() {
-  background(200);
-  controlador1.dibujar();
+  controlador.dibujar();
 }
 
-void mouseClicked() {
-  controlador1.mouseClicked();
+void mousePressed() {
+  controlador.mousePressed();
+}
+void mouseReleased() {
+  controlador.mouseReleased();
 }
 void keyPressed() {
-  controlador1.keyPressed();
+  controlador.keyPressed();
 }
