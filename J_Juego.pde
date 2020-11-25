@@ -51,8 +51,9 @@ class Juego {
       estado = 3;
     }
   } 
+  
   void reiniciarJuego() {
-    if  (controlador.pantallaActual == controlador.pantallas[1]) {
+   if  (controlador.pantallaActual == controlador.pantallas[1]) {
       if (mouseX > resize.porcentajeX(500)&& mouseX <   resize.porcentajeX(600) && mouseY > resize.porcentajeY(460) && mouseY <  resize.porcentajeY(510)) {
         estado = 1;
       }

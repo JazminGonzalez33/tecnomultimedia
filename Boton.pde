@@ -3,7 +3,7 @@ class Boton {
   String texto;
   PImage boton;
   Resize resize = new Resize();
- Controlador controlador;
+  Controlador controlador;
   Boton(String texto, int posX, int posY, int pantallaAIr, Resize resize, Controlador controlador) {
     this.texto = texto;
     this.posX = posX;
@@ -25,6 +25,10 @@ class Boton {
     if (mouseX > resize.porcentajeX(posX) && mouseX < resize.porcentajeX(posX + ancho) && mouseY > resize.porcentajeY(posY) && mouseY < resize.porcentajeY(posY + alto) ) {
       if (pantallaAIr == 28) {
         controlador.Musica.play();
+        controlador.Musica.loop();
+      } 
+      if (pantallaAIr == 1) {
+        controlador.Musica.stop();
       }
       return pantallaAIr;
     }

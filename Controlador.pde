@@ -11,7 +11,7 @@ class Controlador {
 
   int pantalla;
   Controlador(PApplet pro) {  
-    Musica = new SoundFile(pro,"Musica.wav");
+    Musica = new SoundFile(pro, "Musica.wav");
     Boton boton1, boton2;
     cargarFondos();
     pantallas = new Pantalla [cantidadPantallas];
@@ -35,7 +35,7 @@ class Controlador {
     pantallas[pantalla] = new Pantalla(fondos[pantalla], textos.getTextoParaPantalla(pantalla), boton1, boton2, null, null);
 
     pantalla = 5;
-    boton1 = new Boton(textos.getTextoParaBoton(4), 500, 450, 6, resize,this);
+    boton1 = new Boton(textos.getTextoParaBoton(4), 500, 450, 6, resize, this);
     boton2 = new Boton(textos.getTextoParaBoton(3), 200, 450, 7, resize, this);
     pantallas[pantalla] = new Pantalla(fondos[pantalla], textos.getTextoParaPantalla(pantalla), boton1, boton2, null, null);
 
@@ -104,7 +104,7 @@ class Controlador {
     pantallas[pantalla] = new Pantalla(fondos[pantalla], textos.getTextoParaPantalla(pantalla), boton1, boton2, null, null);
 
     pantalla = 24;
-    boton1 = new Boton(textos.getTextoParaBoton(4), 500, 450, 25, resize,this);
+    boton1 = new Boton(textos.getTextoParaBoton(4), 500, 450, 25, resize, this);
     boton2 = new Boton(textos.getTextoParaBoton(3), 200, 450, 6, resize, this);
     pantallas[pantalla] = new Pantalla(fondos[pantalla], textos.getTextoParaPantalla(pantalla), boton1, boton2, null, null);
 
@@ -138,7 +138,7 @@ class Controlador {
   }
 
   void keyPressed() {
-    juego.teclaPresionada(); //nuell
+    juego.teclaPresionada(); 
   }
   void mouseClicked() {
     creditos.reiniciarcreditos();
